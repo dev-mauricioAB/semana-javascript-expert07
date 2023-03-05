@@ -42,6 +42,9 @@ export default class HandGestureService {
       );
       yield { event: result.name, x, y };
 
+      if (hand.handedness === "Left") console.log("🤞 Left");
+      if (hand.handedness === "Right") console.log("🤞 Right");
+
       console.log("detected", this.#gestureStrings[result.name]);
     }
   }
